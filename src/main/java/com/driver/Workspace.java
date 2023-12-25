@@ -39,19 +39,4 @@ public class Workspace extends Gmail {
 
         return maxMeetings;
     }
-
-    public static void main(String[] args) {
-        Workspace workspace = new Workspace("workspace@example.com");
-
-        Meeting meeting1 = new Meeting(LocalTime.of(9, 0), LocalTime.of(10, 0));
-        Meeting meeting2 = new Meeting(LocalTime.of(11, 0), LocalTime.of(12, 0));
-        Meeting meeting3 = new Meeting(LocalTime.of(10, 30), LocalTime.of(11, 30));
-
-        workspace.addMeeting(meeting1);
-        workspace.addMeeting(meeting2);
-        workspace.addMeeting(meeting3);
-
-        int maxMeetings = workspace.findMaxMeetings();
-        System.out.println("Max Meetings: " + maxMeetings);
-    }
 }
