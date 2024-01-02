@@ -20,7 +20,7 @@ public class Main {
         System.out.println("Total " + gmail.getInboxSize() + " mails in inbox.");
         System.out.println("There are " + gmail.findMailsBetweenDates(new SimpleDateFormat("dd/MM/yyyy").parse("21/12/2022"), new SimpleDateFormat("dd/MM/yyyy").parse("22/12/2022")) + " mails between given dates!");
         gmail.deleteMail("Everything looks good.");
-        System.out.println("The latest message is :" + gmail.findLatestMessage());
+        System.out.println("The latest message is: " + gmail.findLatestMessage());
         gmail.deleteMail("Assignment to be uploaded on database.");
         System.out.println("There are " + gmail.getTrashSize() + " mails in the trash.");
         gmail.emptyTrash();

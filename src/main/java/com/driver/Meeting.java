@@ -2,11 +2,14 @@ package com.driver;
 
 import java.time.LocalTime;
 
-public class Meeting {
+class Meeting {
     private LocalTime startTime;
     private LocalTime endTime;
 
     public Meeting(LocalTime startTime, LocalTime endTime) {
+        if (startTime.isAfter(endTime)) {
+            throw new IllegalArgumentException("Start time must be before or equal to end time.");
+        }
         this.startTime = startTime;
         this.endTime = endTime;
     }
@@ -19,3 +22,4 @@ public class Meeting {
         return endTime;
     }
 }
+
